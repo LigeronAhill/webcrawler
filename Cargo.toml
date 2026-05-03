@@ -3,5 +3,27 @@ name = "webcrawler"
 version = "0.1.0"
 edition = "2024"
 
+[lib]
+name = "webcrawler"
+path = "src/lib.rs"
+
+[[bin]]
+name = "webcrawler"
+path = "src/main.rs"
+
 [dependencies]
-reqwest = { version = "0.13.3", default-features = false, features = ["gzip", "brotli", "rustls-tls"] }
+anyhow = "1.0.102"
+crossterm = "0.29.0"
+ratatui = "0.30.0"
+reqwest = { version = "0.13.3", default-features = false, features = [
+  "blocking",
+  "brotli",
+  "gzip",
+  "rustls",
+] }
+rusqlite = { version = "0.39.0", features = ["bundled"] }
+scraper = "0.26.0"
+tokio = { version = "1.52.1", features = ["macros", "rt-multi-thread"] }
+tracing = "0.1.44"
+tracing-subscriber = "0.3.23"
+url = "2.5.8"
