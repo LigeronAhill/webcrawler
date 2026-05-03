@@ -1,0 +1,56 @@
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+*.rs.bk
+Cargo.lock
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+*.db3
+
+# SQLite journal files
+*.db-journal
+*.sqlite-journal
+*.db-wal
+*.db-shm
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Документация
+/docs/
+/target/doc/
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.temp
+
+# Файлы окружения
+.env
+.env.*
+!.env.example
+
+# Тестовые данные
+test_data/
+*.test.db
+
+# Бекапы
+*.bak
+*.backup
+*.old
+
+# Результаты профилирования
+*.prof
+*.profraw
+
+# Сборка для CI/CD
+**/*.dSYM/target
